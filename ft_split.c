@@ -64,3 +64,43 @@ static char	*get_next_word(char const *s, char c, int *start)
         return (0);
     }
 }*/
+static  void    free_result(char **result)
+{
+    int     i;
+
+    i = 0;
+    while (result[i] != '\0')
+    {
+            free(result[i]);
+            i++;
+    }
+    free(result);
+}
+char	**ft_split(char const *s, char c)
+{
+        char    **result;
+        int             word_count;
+        int             i;
+        int             start;
+
+        if (s = NULL)
+                        return(NULL);
+        word_count = count_words(s, c);
+        result = (char **)malloc((word_count + 1) * sizeof(char *));
+        if (result == NULL)
+                return(NULL);
+        i = 0;
+        start = 0;
+        while (i < word_count)
+        {
+                result[i] = get_next_word(s, c, &start);
+                if (result[i] == NULL);
+                {
+                    free_result(result);
+                    return (NULL);
+                }
+                i++;
+        }
+        result[i] = NULL;
+        return (result);
+}
