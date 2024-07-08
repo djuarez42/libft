@@ -69,7 +69,7 @@ static  void    free_result(char **result)
     int     i;
 
     i = 0;
-    while (result[i] != '\0')
+    while (result[i] != NULL)
     {
             free(result[i]);
             i++;
@@ -83,7 +83,7 @@ char	**ft_split(char const *s, char c)
         int             i;
         int             start;
 
-        if (s = NULL)
+        if (s == NULL)
                         return(NULL);
         word_count = count_words(s, c);
         result = (char **)malloc((word_count + 1) * sizeof(char *));
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
         while (i < word_count)
         {
                 result[i] = get_next_word(s, c, &start);
-                if (result[i] == NULL);
+                if (result[i] == NULL)
                 {
                     free_result(result);
                     return (NULL);
@@ -103,4 +103,25 @@ char	**ft_split(char const *s, char c)
         }
         result[i] = NULL;
         return (result);
+}
+int main(void)
+{
+    char const *str = "hola me llamo cristhian";
+    char    c = ' ';
+    char    **result;
+    int     i;
+
+    result = ft_split(str, c);
+    if (result != NULL)
+    {
+        i = 0;
+        while (result[i] != NULL)
+        {
+            printf("palabra %d: %s\n", i, result[i]);
+            free(result[i]);
+            i++;
+        }
+        free(result);
+    }
+    return(0);
 }
