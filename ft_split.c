@@ -104,7 +104,7 @@ char	**ft_split(char const *s, char c)
         result[i] = NULL;
         return (result);
 }
-int main(void)
+/*int main(void)
 {
     char const *str = "hola me llamo cristhian";
     char    c = ' ';
@@ -125,3 +125,4 @@ int main(void)
     }
     return(0);
 }
+*/
