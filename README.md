@@ -2,16 +2,16 @@ Libft - Custom Static C Library NOTES
 
 
 Function Index
-Character Handling	String Manipulation	Memory Management	File Operations	Linked List
-ft_isalpha	ft_strlen	ft_memset	ft_putchar_fd	ft_lstnew
-ft_isdigit	ft_strlcpy	ft_bzero	ft_putstr_fd	ft_lstadd_front
-ft_isalnum	ft_strlcat	ft_memcpy	ft_putendl_fd	ft_lstsize
-ft_isascii	ft_strchr	ft_memmove	ft_putnbr_fd	ft_lstlast
-ft_isprint	ft_strrchr	ft_memchr		ft_lstadd_back
-ft_toupper	ft_strnstr	ft_memcmp		ft_lstdelone
-ft_tolower	ft_strncmp	ft_calloc		ft_lstclear
-ft_strdup			ft_lstiter
-ft_atoi			ft_lstmap
+Character Handling	String Manipulation	Memory Management	
+ft_isalpha	ft_strlen	ft_memset	ft_putchar_fd	
+ft_isdigit	ft_strlcpy	ft_bzero	ft_putstr_fd	
+ft_isalnum	ft_strlcat	ft_memcpy	ft_putendl_fd	
+ft_isascii	ft_strchr	ft_memmove	ft_putnbr_fd	
+ft_isprint	ft_strrchr	ft_memchr		
+ft_toupper	ft_strnstr	ft_memcmp		
+ft_tolower	ft_strncmp	ft_calloc		
+ft_strdup		
+ft_atoi			
 ft_substr			
 ft_strjoin			
 ft_strtrim			
